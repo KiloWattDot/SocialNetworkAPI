@@ -34,16 +34,16 @@ const userSchema = new mongoose.Schema({
 
 userSchema.virtual('friendCount').get(function () {
     return this.friends.length;
-  });
+});
 
 
 const User = mongoose.model('User', userSchema);
 
 
-const newUser = new User({
-    username: "kilowattdot",
-    email: "dot.gilchrist95@gmail.com"
-})
+// const newUser = new User({
+//     username: "kilowattdot",
+//     email: "dot.gilchrist95@gmail.com"
+// })
 
 
 // User.find({}).exec((err, collection) => {
@@ -64,4 +64,4 @@ const newUser = new User({
 //   });
 
 
-module.exports = {User, newUser};
+module.exports = User;

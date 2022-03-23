@@ -38,10 +38,6 @@ thoughtSchema.virtual("reactionCount").get(function () {
   const Thought = mongoose.model('thought', thoughtSchema);
 
 
-  const newThought = new Thought({
-    thoughtText: "I wonder what new ways NFTs will be utilized 10 years from now",
-    username: "kilowattdot"
-})
 
 
 // Thought.find({}).exec((err, collection) => {
@@ -62,4 +58,4 @@ thoughtSchema.virtual("reactionCount").get(function () {
 //   });
 
   
-  module.exports = { Thought, newThought};
+  module.exports =  Thought;
